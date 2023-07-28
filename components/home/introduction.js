@@ -18,12 +18,12 @@ export default function Introduction() {
               truffaut hexagon try-hard chambray.
             </p>
             <div className="flex justify-center">
-              <Link href={"https://github.com/26seung"} className="btn-project">
+              {/* <Link href={"https://github.com/26seung"} className="btn-project"> */}
+              <Link href="/projects" className="btn-project">
                 더 보기...
               </Link>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"></div>
         </div>
       </section>
     </>
