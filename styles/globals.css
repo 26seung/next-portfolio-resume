@@ -19,11 +19,15 @@
 
 .project-card {
   @apply flex flex-col m-3 rounded-xl w-full
-            transition duration-300 transform border border-gray-300
+            transition duration-300 transform border border-indigo-400
             hover:scale-105
-            hover:shadow-lg
-            dark:border-gray-200/50
-            dark:hover:shadow-gray-400/40
+            hover:shadow-xl
+            /* dark:border-gray-200/50 */
+            /* dark:hover:shadow-gray-400/40 */
+            border-neutral-500
+            hover:shadow-neutral-500
+            dark:border-indigo-400
+            dark:hover:shadow-indigo-400/40
 
             hover:text-blue-600;
 }
