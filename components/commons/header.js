@@ -1,15 +1,10 @@
 import Link from "next/link";
-import DarkModeToggleButton from "./darkModeToggleButton";
+import DarkModeToggleButton from "/components/commons/darkModeToggleButton";
+import ActionService from "/service/actionService";
 
 export default function Header() {
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      console.log("section : ", section);
-      const yOffset = -50; // 선택적으로 상단 여백을 조정할 수 있습니다.
-      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
+    ActionService.scrollTo(sectionId);
   };
 
   return (
@@ -35,7 +30,6 @@ export default function Header() {
             <span className="ml-3 text-xl">Portfolio</span>
           </Link>
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-lg justify-center">
-            {/* <div className="horizontal-underline"> */}
             <a
               onClick={() => scrollToSection("section1")}
               className="custom-link mr-7 hover:text-gray-900 hover:font-bold hover:underline"
@@ -55,15 +49,13 @@ export default function Header() {
               Contact
             </a>
             <Link
-              href="/aaa.html"
+              href="https://ebony-statistic-df3.notion.site/Junior-Backend-LeeYuSeung-343f30692dc542ad82a103fffe42cb81?pvs=4"
               target="blank"
               className="custom-link mr-7 hover:text-gray-900 hover:font-bold hover:underline"
             >
               Resume
             </Link>
-            {/* </div> */}
           </nav>
-          {/* DarkModeToggleButton */}
           <DarkModeToggleButton />
         </div>
       </header>
