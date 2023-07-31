@@ -1,11 +1,8 @@
-import Head from "next/head";
-import Layout from "../components/layout";
-import Introduction from "../components/home/introduction";
-import Animation from "../components/home/animation";
-import { useEffect } from "react";
-import Contact from "../components/contact/contact";
-import Projects from "../components/projects/projects";
-import { NOTION_DATABASE_ID, NOTION_TOKEN } from "../config";
+import Introduction from "/components/home/introduction";
+import Animation from "/components/home/animation";
+import Contact from "/components/contact/contact";
+import Project from "/components/projects/project";
+import { NOTION_DATABASE_ID, NOTION_TOKEN } from "/config";
 
 export default function Home({ projectData }) {
   return (
@@ -13,7 +10,7 @@ export default function Home({ projectData }) {
       <div className="container mx-auto ">
         <Animation />
         <Introduction />
-        <Projects projectData={projectData} />
+        <Project projectData={projectData} />
         <Contact />
       </div>
     </>
@@ -40,5 +37,5 @@ export async function getStaticProps() {
 
   const projectData = await reponse.json();
 
-  return { props: { projectData }, revalidate: 60 };
+  return { props: { projectData }, revalidate: 600 };
 }
