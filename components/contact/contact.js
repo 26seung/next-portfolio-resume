@@ -25,7 +25,7 @@ export default function Contact() {
             </h2>
             <p className="text-gray-500 text-sm mb-5">junior developer</p>
             <Link
-              href="/resume.pdf"
+              href="https://ebony-statistic-df3.notion.site/Junior-Backend-LeeYuSeung-343f30692dc542ad82a103fffe42cb81?pvs=4"
               target="blank"
               className="text-sm border-b-2 mt-5 inline-block border-gray-500"
             >
