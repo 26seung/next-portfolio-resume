@@ -1,8 +1,7 @@
 import Link from "next/link";
-import ProjectItem from "./project-item";
-import { NOTION_DATABASE_ID, NOTION_TOKEN } from "../../config";
+import ProjectItem from "/components/projects/project-item";
 
-export default function Projects({ projectData }) {
+export default function Project({ projectData }) {
   return (
     <section id="section2" className="section">
       <div className="flex flex-col text-center w-full mb-20">

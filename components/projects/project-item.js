@@ -7,8 +7,6 @@ export default function ProjectItem({ data }) {
   const imgSrc = data.cover.file?.url || data.cover.external.url;
   const type = data.properties.Type.multi_select[0].name;
   const tags = data.properties.Tags.multi_select;
-  const start = data.properties.WorkPeriod.date.start;
-  const end = data.properties.WorkPeriod.date.end;
   const moreUrl = data.public_url;
 
   {
@@ -27,6 +25,7 @@ export default function ProjectItem({ data }) {
                 width={720}
                 height={600}
                 // layout="fixed"
+                // objectFit="none"
                 quality={100}
               />
             </div>
@@ -34,7 +33,9 @@ export default function ProjectItem({ data }) {
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-semibold font-mono text-gray-900 dark:text-amber-300">
                 {title}
               </h1>
-              <p className="mb-8 pl-2 leading-relaxed">{description}</p>
+              <p className="mb-5 pl-2 text-base font-sans leading-relaxed">
+                {description}
+              </p>
               {/* <div className="flex justify-center"> */}
               <div className="tags flex items-start mt-5">
                 <h1 className="text-xs px-2 py-1 mr-2 rounded-md bg-pink-200 dark:bg-pink-600 w-30">
