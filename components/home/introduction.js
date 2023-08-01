@@ -23,8 +23,8 @@ export default function Introduction() {
               Solutions Architect-Associate (SAA) 자격증을 취득하였습니다.
               <br className="hidden lg:inline-block" />
               이러한 노력들은 개발자로서 능력을 키우기 위한 것이며, 앞으로도
-              꾸준한 학습을 통해 기초를 다듬고 새로운 기술을 습득하여 부끄럽지
-              않은 전문가로 성장하겠습니다.
+              꾸준한 학습을 통해 기초를 다듬고 새로운 기술을 습득하여 전문가로
+              성장하겠습니다.
               <br className="hidden lg:inline-block" />
               저는 끊임없는 도전과 성장에 적극적이며, 새로운 도전을 통해 더 큰
               성과를 이뤄내고 싶습니다.

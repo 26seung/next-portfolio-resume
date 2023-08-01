@@ -18,7 +18,7 @@ export default function Home({ projectData }) {
 }
 
 //  빌드시 호출
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   //  Notion API (Query a database)
   const options = {
     method: "POST",
@@ -37,5 +37,9 @@ export async function getStaticProps() {
 
   const projectData = await reponse.json();
 
-  return { props: { projectData }, revalidate: 600 };
-}
+  return {
+    props: { projectData },
+    // 페이지 재생성 시간 설정,, 일단 주석
+    //  revalidate: 600
+  };
+};
