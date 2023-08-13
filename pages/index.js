@@ -39,7 +39,7 @@ export const getStaticProps = async () => {
 
   return {
     props: { projectData },
-    // 페이지 재생성 시간 설정,, 일단 주석
-    //  revalidate: 600
+    // ISR 설정 : 설정한 시간 값 마다 페이지를 새로 렌더링
+    revalidate: 60 * 60 * 2,
   };
 };

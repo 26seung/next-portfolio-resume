@@ -17,11 +17,17 @@ Notion API 를 호출하여 포트폴리오에 관련된 데이터를 가져와 
 Static Generation 방식을 이용하여 빌드시점에 pre-rendering 하여 정적페이지 사용
 
 - getStaticProps 사용 :
-  - 서버에서 미리 실행되며 클라이언트에서는 실행되지 않는다,
-  - 페이지 렌더링에 필요한 데이터는 사용자 request 전에 빌드 시점에 HTML 파일 생성,
+
+  - 서버에서 미리 실행되며 클라이언트에서는 실행되지 않는다.
+  - 페이지 렌더링에 필요한 데이터는 사용자 request 전에 빌드 시점에 HTML 파일 생성.
   - 페이지에서만 사용가능하다. (app, document, error 파일)에선 사용이 불가능.
-    - React는 페이지가 렌더링되기 전에 필요한 모든 데이터를 가지고 있어야 하기 때문이다.
-  - revalidate 옵션을 통해 페이지 재생성 시간 설정 가능
+  - React는 페이지가 렌더링되기 전에 필요한 모든 데이터를 가지고 있어야 하기 때문이다.  
+    <br >
+
+- ISR (Incremental Static Regeneration)
+  - 설정한 시간 값 마다 페이지를 새로 렌더링 되며 SSG 에 포함되는 개념
+  - SSG는 빌드 시에 페이지를 생성하기 때문에 fetching 데이터가 변경되면 다시 빌드해야 하지만 ISR은 일정 시간마다 알아서 페이지를 업데이트
+  - `revalidate: * ,` 옵션을 통해 페이지 재생성 시간 설정 가능
 
 ```js
 export const getStaticProps = async () => {
@@ -44,8 +50,8 @@ export const getStaticProps = async () => {
 
   return {
     props: { projectData },
-    // 페이지 재생성 빌드 초시간 설정,,
-    revalidate: 600,
+    // ISR 설정 : 설정한 시간 값 마다 페이지를 새로 렌더링
+    revalidate: 60 * 60 * 2,
   };
 };
 ```
