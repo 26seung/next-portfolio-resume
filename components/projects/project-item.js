@@ -36,16 +36,16 @@ export default function ProjectItem({ data }) {
               <p className="mb-5 pl-2 text-base font-sans leading-relaxed">
                 {description}
               </p>
-              {/* <div className="flex justify-center"> */}
+
               <div className="tags flex items-start mt-5">
-                <h1 className="text-xs px-2 py-1 mr-2 rounded-md bg-pink-200 dark:bg-pink-600 w-30">
+                <h1 className="hover:scale-110 text-xs px-2 py-1 mr-2 rounded-md bg-pink-200 dark:bg-pink-600 w-30">
                   {type}
                 </h1>
               </div>
               <div className="tags flex items-start mt-2">
                 {tags.map((aTag) => (
                   <h1
-                    className="text-xs px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30"
+                    className="hover:scale-110 text-xs px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30"
                     key={aTag.id}
                   >
                     {aTag.name}
@@ -56,7 +56,7 @@ export default function ProjectItem({ data }) {
                 <a
                   href={github}
                   target="blank"
-                  className="text-xs pr-5 mt-3 text-indigo-900 inline-flex items-center"
+                  className="hover:scale-110 hover:font-bold text-xs pr-5 mt-3 dark:text-white inline-flex items-center"
                 >
                   GitHub
                   <svg
@@ -74,7 +74,7 @@ export default function ProjectItem({ data }) {
                 <a
                   href={moreUrl}
                   target="blank"
-                  className="text-xs pr-5 mt-3 text-indigo-900 inline-flex items-center"
+                  className="hover:scale-110 hover:font-bold text-xs pr-5 mt-3 dark:text-white inline-flex items-center"
                 >
                   More
                   <svg
@@ -95,82 +95,5 @@ export default function ProjectItem({ data }) {
         </section>
       </div>
     </>
-    // <div className="project-card">
-    //   <section className="text-gray-600 body-font">
-    //     <div className="container px-5 py-10 mx-auto">
-    //       <div className="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
-    //         <div className="sm:w-32 sm:h-32 h-50 w-50 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
-    //           <Image
-    //             className="rounded-t-xl rounded-b-xl"
-    //             src={imgSrc}
-    //             alt="cover image"
-    //             width={500}
-    //             height={500}
-    //             layout="responsive"
-    //             objectFit="cover"
-    //             quality={100}
-    //           />
-    //         </div>
-    //         <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-    //           <h2 className="text-2xl text-gray-900 text-lg title-font font-medium mb-2">
-    //             {title}
-    //           </h2>
-    //           <p className="leading-relaxed text-base">{description}</p>
-    //           <div className="tags flex items-start mt-5">
-    //             <h1 className="text-xs px-2 py-1 mr-2 rounded-md bg-pink-200 dark:bg-pink-600 w-30">
-    //               {type}
-    //             </h1>
-    //           </div>
-    //           <div className="tags flex items-start mt-2">
-    //             {tags.map((aTag) => (
-    //               <h1
-    //                 className="text-xs px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30"
-    //                 key={aTag.id}
-    //               >
-    //                 {aTag.name}
-    //               </h1>
-    //             ))}
-    //           </div>
-    //           <a
-    //             href={github}
-    //             target="blank"
-    //             className="text-xs pr-5 mt-3 text-indigo-900 inline-flex items-center"
-    //           >
-    //             GitHub
-    //             <svg
-    //               fill="none"
-    //               stroke="currentColor"
-    //               strokeLinecap="round"
-    //               strokeLinejoin="round"
-    //               strokeWidth="2"
-    //               className="w-4 h-4"
-    //               viewBox="0 0 24 24"
-    //             >
-    //               <path d="M5 12h14M12 5l7 7-7 7"></path>
-    //             </svg>
-    //           </a>
-    //           <a
-    //             href={moreUrl}
-    //             target="blank"
-    //             className="text-xs pr-5 mt-3 text-indigo-900 inline-flex items-center"
-    //           >
-    //             More
-    //             <svg
-    //               fill="none"
-    //               stroke="currentColor"
-    //               strokeLinecap="round"
-    //               strokeLinejoin="round"
-    //               strokeWidth="2"
-    //               className="w-4 h-4 "
-    //               viewBox="0 0 24 24"
-    //             >
-    //               <path d="M5 12h14M12 5l7 7-7 7"></path>
-    //             </svg>
-    //           </a>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </section>
-    // </div>
   );
 }

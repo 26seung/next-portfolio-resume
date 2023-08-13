@@ -25,7 +25,7 @@ export default function Project({ projectData }) {
           href="https://github.com/26seung"
           target="_blank"
           rel="noreferrer"
-          className="bg-gray block shadow-lg uppercase border border-gray-500 rounded-lg text-center my-12 p-2 max-w-xs m-auto"
+          className="hover:scale-110 bg-gray block shadow-lg uppercase border border-gray-500 rounded-lg text-center my-12 p-2 max-w-xs m-auto"
         >
           <span>See more on Github</span>
         </Link>
