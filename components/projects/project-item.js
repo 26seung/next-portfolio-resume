@@ -20,13 +20,13 @@ export default function ProjectItem({ data }) {
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 project-card">
               <Image
                 className="object-cover object-center rounded rounded-xl"
-                alt="hero"
+                alt="image"
                 src={imgSrc}
                 width={720}
                 height={600}
                 // layout="fixed"
                 // objectFit="none"
-                quality={100}
+                // quality={100}
               />
             </div>
             <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">

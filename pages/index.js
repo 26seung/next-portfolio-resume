@@ -40,6 +40,6 @@ export const getStaticProps = async () => {
   return {
     props: { projectData },
     // ISR 설정 : 설정한 시간 값 마다 페이지를 새로 렌더링
-    revalidate: 60 * 60 * 2,
+    revalidate: 60 * 60 * 24,
   };
 };
