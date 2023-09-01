@@ -4,7 +4,7 @@ export default function ProjectItem({ data }) {
   const title = data.properties.name.title[0].plain_text;
   const github = data.properties.GitHub.url;
   const description = data.properties.Description.rich_text[0].plain_text;
-  const imgSrc = data.cover.file?.url || data.cover.external.url;
+  const imgSrc = data.cover.file?.url;
   const type = data.properties.Type.multi_select[0].name;
   const tags = data.properties.Tags.multi_select;
   const moreUrl = data.public_url;
